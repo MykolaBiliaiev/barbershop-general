@@ -1,0 +1,20 @@
+.pre-footer-container {
+    width: 100%;
+
+    @media screen and (min-width:768px) {
+        margin: 0;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex; 
+    }
+}
+
+.online,
+.pre-footer-contacts {
+
+    @media screen and (min-width:1200px) {
+        width: 50%;
+    }
+    
+}

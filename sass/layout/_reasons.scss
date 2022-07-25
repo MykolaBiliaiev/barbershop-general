@@ -1,0 +1,113 @@
+// classes mades with BEM
+
+.reasons {
+    padding-top: 84px;
+    padding-bottom: 84px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+}
+
+.reasons-container {
+    // display: flex;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row-reverse;
+        // justify-content: center;
+    }
+}
+
+.reasons__right {
+    margin-bottom: 44px;
+    
+    @media screen and (min-width: 768px) {
+        max-width: 500px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: unset;
+    }
+}
+
+.reasons__left {
+    display: flex;
+    @media screen and (min-width: 768px) {
+        justify-content: flex-end;
+    }
+    @media screen and (min-width: 1200px) {
+        justify-content: space-between;
+    }
+}
+
+.reasons-list {
+    // width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+        max-width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 370px;
+    }
+}
+
+.reasons-list__item {
+    // width: 170px;
+    width: calc(50% - 15px);
+    height: 133px;
+    background-color: #f7f7f7;
+    padding: 20px;
+
+    &:nth-child(odd) {
+        margin-right: 30px;
+    }
+    
+    &:nth-child(even) {
+        margin-top: 30px;
+    }
+}
+
+.reasons__left,
+.reasons__right {
+    @media screen and (min-width:1200px) {
+        width: calc(50% - 30px); 
+    }
+}
+
+.reasons-list__value {
+    @include font(42px,700,1.36,00.05em);
+    text-align: center;
+    color: getColor('third-text-color');
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    &::after {
+        content: "+";
+        @include font(16px, 600, 1.38, 0.02em);
+        text-align: center;
+        color: getColor('accent-color');
+    }
+}
+
+.reasons-list__text {
+    @include font(11px,600,1.36,00.09em);
+    text-align: center;
+    color: getColor('third-text-color');
+}
+
+.reasons__pre-title {
+    margin-bottom: 20px;
+}
+
+.reasons__title {
+    color: getColor('second-title-color');
+    margin-bottom: 20px;
+    // max-width: 400px;
+}
+
+.reasons__after-title {
+    color: getColor('fourth-text-color');
+    // max-width: 600px;
+}

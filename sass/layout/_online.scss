@@ -1,0 +1,141 @@
+.online {
+    background-color: #191C26;
+    padding-top: 84px;
+    padding-bottom: 84px;
+
+    @media screen and (min-width:768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width:1200px) {
+        padding-top: 130px;
+        padding-bottom: 193px;
+    }
+}
+
+.online-title {
+    @include font(42px,700,1.16,00.05em);
+    text-align:center;
+    margin-bottom: 44px;
+    color: getColor('main-title-color');
+
+    @media screen and (min-width:768px) {
+        text-align:unset;
+        margin-left: 39px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-left: 70px;
+    }
+}
+
+.online-form {
+    margin: 31px;
+    
+    @media screen and (min-width:768px) {
+        margin-left: 39px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-left: 70px;
+    }
+}
+
+.online-input {
+    @include font(11px,600,1.33,00.1em);
+    width: 100%;
+    margin-bottom: 44px;
+    height: 24px;
+    color: rgba(157, 164, 189, 0.4);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    padding: 0 5px;
+
+    &:hover,
+    &:focus {
+        border: none;
+        border-bottom: 1px solid #FFFFFF;
+        color: #FFFFFF;
+    }
+
+    &::placeholder {
+        @include font(11px,600,1.33,00.1em);
+        text-transform: uppercase; 
+        color: rgba(157, 164, 189, 0.4);
+    }
+
+        @media screen and (min-width:768px) {
+            width: 310px;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 220px;
+        }
+}
+
+@media screen and (min-width:768px) {
+    .online-input:nth-child(odd) {
+        margin-right: 30px;
+    }
+}
+
+.online-input:focus::placeholder,
+.online-textarea:focus::placeholder {
+    color: #ffffff;
+}
+
+.online-textarea {
+    width: 100%;
+    height: 76px;
+    color: getColor('main-title-color');
+    background-color: transparent;
+    resize: none;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+    &:hover,
+    &:focus {
+        border: none;
+        border-bottom: 1px solid #FFFFFF;
+        color: #FFFFFF;
+    }
+
+    &::placeholder {
+        @include font(11px,600,1.36,00.1em);
+        text-transform: uppercase;
+        color: rgba(157, 164, 189, 0.4);
+    }
+
+    @media screen and (min-width:768px) {
+        width: 650px;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 470px;
+    }
+}
+
+.online-submit-btn {
+    font-family: inherit;
+    @include font(12px,600,1.33,00.09em);
+    text-transform: uppercase;
+    color: getColor('first-button-color');
+    background-color: getColor('accent-color');
+    display: block;
+    margin-top: 44px;
+
+    &:hover,
+    &:focus {
+        color: getColor('second-button-color');
+        border-color: getColor('first-button-color');
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: auto;
+        margin-top: 44px;
+    }
+}
+

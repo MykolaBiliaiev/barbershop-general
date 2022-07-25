@@ -1,0 +1,123 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+.header-container {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width:767px) {
+        padding-left: 31px;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        padding:0;
+    }
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+}
+
+// .header-logo {
+// }
+
+.logo-icon {
+    @media screen and (max-width:767px) {
+        fill: white;
+    }
+}
+
+.header-list {
+    display: none;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        align-items: center;
+        margin-left: 60px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-left: 70px;
+    }
+}
+
+.header-item {
+margin-right: 15px;
+
+        &:last-child {
+            margin-right: 0;
+}
+}
+
+@media screen and (min-width:1200px) {
+    .header-item {
+    margin-right: 40px;
+} 
+}
+
+.header-link {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: getColor('header-text-color');
+    transition: color 300ms linear;
+
+    &:hover,
+    &:focus {
+        color: getColor('accent-color');
+    }
+}
+
+.header-right-side {
+    margin-left: auto;
+    @media screen and (max-width:768px) {
+        display: none;
+    }
+
+    @media screen and (min-width:768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: block;
+        margin-left: auto;
+    }
+}
+
+.header-tel {
+    @include font(13px,600,1.33,00.1em);
+    text-transform: uppercase;
+    color: getColor('header-text-color');
+    transition: color 300ms linear;
+
+    &:hover,
+    &:focus {
+        color: getColor('accent-color');
+    }
+}
+
+.header-btn {
+    margin-right: 10px;
+    margin-left: 20px;
+    color: getColor('first-button-color');
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-bottom: 20px;
+    }
+}

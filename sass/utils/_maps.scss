@@ -1,0 +1,16 @@
+$colors: (
+    'main-title-color': #FFFFFF,
+    'second-title-color': #303030,
+    'first-text-color': rgba(157, 164, 189, 0.6),
+    'second-text-color': #9DA4BD,
+    'third-text-color': #303030,
+    'fourth-text-color':#555555,
+    'first-button-color': #FFFFFF,
+    'second-button-color': #303030,
+    'header-text-color': #FFFFFF,
+    'accent-color':#FF6C00,
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+  }
